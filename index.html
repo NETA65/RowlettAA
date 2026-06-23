@@ -1806,6 +1806,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <main id="main-content" class="page-container">
     <section id="home-page" class="page-content">
+        <div id="announcements-banner" class="full-width-section hidden" role="region" aria-label="Group announcements"></div>
         <div id="todays-meetings-banner" class="full-width-section bg-yellow-100 border-b-4 border-yellow-300 text-yellow-900"></div>
         <div class="full-width-section relative text-white text-center">
             <div class="hero-gradient" role="img" aria-label="Animated gradient representing hope, new beginnings, and the journey of recovery in Alcoholics Anonymous">
@@ -3347,6 +3348,84 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             }
         }, 50);
     }
+
+    /* ========================================================================
+       ANNOUNCEMENTS DATA ARRAY - Home Page Banner Announcements
+       ========================================================================
+
+       📝 HOW TO ADD A NEW ANNOUNCEMENT:
+       --------------------------------
+       Add an object to this array. Each announcement shows in the banner at the
+       very top of the Home page, but ONLY while today's date falls between its
+       startDate and endDate (inclusive). Before the startDate or after the
+       endDate it is hidden automatically - no code changes needed. This works
+       the same way events display dynamically based on their dates.
+
+       TEMPLATE:
+       {
+           // REQUIRED FIELDS
+           startDate: 'YYYY-MM-DD',   // first day the announcement appears
+           endDate:   'YYYY-MM-DD',   // last day the announcement appears (inclusive)
+           title:     'Short headline',
+           message:   'Full announcement text.',
+
+           // OPTIONAL FIELDS
+           icon: 'fa-bullhorn',       // Font Awesome 6 solid icon name (default: fa-bullhorn)
+
+           // STYLING (pick ONE scheme below; defaults to the blue "info" scheme)
+           bgColor:     'bg-blue-50',
+           borderColor: 'border-blue-500',
+           textColor:   'text-blue-900'
+       }
+
+       🎨 COLOR SCHEMES (choose one):
+       -------------------------------
+       Info / general:    bgColor:'bg-blue-50',   borderColor:'border-blue-500',   textColor:'text-blue-900'
+       Heads-up / notice: bgColor:'bg-yellow-50', borderColor:'border-yellow-500', textColor:'text-yellow-900'
+       Positive / done:   bgColor:'bg-green-50',  borderColor:'border-green-500',  textColor:'text-green-900'
+       Important / alert: bgColor:'bg-red-50',    borderColor:'border-red-500',    textColor:'text-red-900'
+
+       💡 TIP: To announce an upcoming change AND then confirm it after it
+       happens, create two entries: one ending the day before the change, and a
+       second starting on the day of the change (see the move announcements below).
+    ======================================================================== */
+
+    const announcementsData = [
+        {
+            // Tuesday night meeting becomes one hour (7:30-8:30 PM) starting July.
+            // Shows now through the end of July so members learn about the change.
+            startDate: '2026-06-23',
+            endDate: '2026-07-31',
+            title: 'Tuesday Night Meeting Time Change',
+            message: 'Starting in July, our Tuesday 7:30 PM meeting will be one hour long, running from 7:30 PM to 8:30 PM.',
+            icon: 'fa-clock',
+            bgColor: 'bg-blue-50',
+            borderColor: 'border-blue-500',
+            textColor: 'text-blue-900'
+        },
+        {
+            // Heads-up that the group is moving on Aug 1, 2026. Shows until the day before the move.
+            startDate: '2026-06-23',
+            endDate: '2026-07-31',
+            title: "We're Moving on August 1, 2026",
+            message: 'On August 1, 2026, the Rowlett Group will move to a new home: 346 Oaks Trail, Garland, TX 75043 (the former Texas Parks & Wildlife building).',
+            icon: 'fa-truck-moving',
+            bgColor: 'bg-yellow-50',
+            borderColor: 'border-yellow-500',
+            textColor: 'text-yellow-900'
+        },
+        {
+            // Confirmation that the group has moved. Shows from the move date through Oct 31, 2026.
+            startDate: '2026-08-01',
+            endDate: '2026-10-31',
+            title: "We've Moved!",
+            message: 'As of August 1, 2026, the Rowlett Group now meets at our new location: 346 Oaks Trail, Garland, TX 75043 (the former Texas Parks & Wildlife building).',
+            icon: 'fa-map-marker-alt',
+            bgColor: 'bg-green-50',
+            borderColor: 'border-green-500',
+            textColor: 'text-green-900'
+        }
+    ];
 
     /* ========================================================================
        EVENTS DATA ARRAY - Enhanced Structure for Events & Happenings Page
@@ -5187,6 +5266,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             document.getElementById('nav-contribute-btn').classList.toggle('nav-contribute-active', pageHash === '#contribute');
         },
         initHomePage: function() {
+            this.renderAnnouncements();
             const schedule = {
                 0: [{ time: "11:00 AM", type: "Open", name: "Discussion Meeting" }],
                 1: [{ time: "12:00 PM", type: "Closed", name: "Discussion Meeting" }, { time: "7:30 PM", type: "Closed", name: "Big Book Study" }],
@@ -5210,6 +5290,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 bannerHTML += `<p class="font-semibold">No meetings today. Check the full schedule.</p>`;
             }
             banner.innerHTML = bannerHTML + '</div>';
+        },
+        renderAnnouncements: function() {
+            const container = this.getElement('announcements-banner');
+            if (!container) return;
+
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            // Show only announcements whose date window includes today (inclusive on both ends).
+            // Dates are parsed with an explicit time so the comparison is not shifted by timezone.
+            const active = announcementsData.filter(a => {
+                const start = new Date(a.startDate + 'T00:00:00');
+                const end = new Date(a.endDate + 'T23:59:59');
+                return today >= start && today <= end;
+            });
+
+            if (active.length === 0) {
+                container.innerHTML = '';
+                container.classList.add('hidden');
+                return;
+            }
+
+            container.classList.remove('hidden');
+            let html = '<div class="container mx-auto px-4 sm:px-6 py-4"><div class="max-w-4xl mx-auto flex flex-col gap-3">';
+            active.forEach(a => {
+                const icon = a.icon || 'fa-bullhorn';
+                const bg = a.bgColor || 'bg-blue-50';
+                const border = a.borderColor || 'border-blue-500';
+                const text = a.textColor || 'text-blue-900';
+                html += `<div class="${bg} ${border} ${text} border-l-4 rounded-r-lg shadow-sm p-4 flex items-start gap-3 text-left">
+                    <i class="fas ${icon} text-xl mt-0.5" aria-hidden="true"></i>
+                    <div>
+                        <p class="font-bold text-base sm:text-lg">${a.title}</p>
+                        <p class="text-sm sm:text-base leading-relaxed">${a.message}</p>
+                    </div>
+                </div>`;
+            });
+            html += '</div></div>';
+            container.innerHTML = html;
         },
         initSchedulePage: function() {
             if (this.initialized.schedule) return;
