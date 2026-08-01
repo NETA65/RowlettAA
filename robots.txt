@@ -1,4 +1,10 @@
 # robots.txt for Rowlett Group of AA (www.rowlettaa.org)
+#
+# Rowlett Group of Alcoholics Anonymous
+# 346 Oaks Trail, Suite 103, Garland, TX 75043
+# Phone: +1-972-925-0096  |  Email: rowlettaa@gmail.com
+# Geo: 32.847287, -96.572932
+# Note: the group moved here on 2026-08-01 from 362 Oaks Trail #162.
 
 User-agent: Googlebot
 Allow: /

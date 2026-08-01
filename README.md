@@ -6,7 +6,7 @@ A modern, feature-rich single-page application (SPA) for the Rowlett Group of Al
 
 ## Quick Facts
 
-- **Location:** 362 Oaks Trail #162, Garland, TX 75043
+- **Location:** 346 Oaks Trail, Suite 103, Garland, TX 75043 *(moved here Aug 1, 2026; previously 362 Oaks Trail #162)*
 - **Contact:** (972) 925-0096 | rowlettaa@gmail.com
 - **Founded:** 1995
 - **Technology:** Single HTML file (358KB) - No build process required
@@ -202,7 +202,7 @@ The application contains 12 main sections, each serving a specific purpose:
 - Email response time expectations
 
 **Contact Details:**
-- **Address:** 362 Oaks Trail #162, Garland, TX 75043
+- **Address:** 346 Oaks Trail, Suite 103, Garland, TX 75043
 - **Phone:** (972) 925-0096
 - **Email:** rowlettaa@gmail.com
 
@@ -774,12 +774,12 @@ Copy and paste these templates, then customize:
     title: 'Christmas Day Open House',
     time: '10:00 AM - 6:00 PM',
     location: 'Rowlett Group',
-    address: '362 Oaks Trail #162, Garland, TX 75043',
+    address: '346 Oaks Trail, Suite 103, Garland, TX 75043',
     category: 'rowlett',
     description: 'Open all day for fellowship and support. Join us for coffee, conversation, and community.',
     requirements: 'Open to all',
     guestsWelcome: true,
-    mapLink: 'https://maps.google.com/?q=362+Oaks+Trail+162+Garland+TX+75043',
+    mapLink: 'https://maps.google.com/?q=346+Oaks+Trail+Suite+103+Garland+TX+75043',
     bgColor: 'bg-blue-50',
     borderColor: 'border-blue-400',
     textColor: 'text-blue-900'
@@ -798,12 +798,12 @@ Copy and paste these templates, then customize:
     title: 'Group Conscience Meeting',
     time: '6:00 PM',
     location: 'Rowlett Group',
-    address: '362 Oaks Trail #162, Garland, TX 75043',
+    address: '346 Oaks Trail, Suite 103, Garland, TX 75043',
     category: 'rowlett',
     description: 'Monthly business meeting for home group members. Discuss group matters, finances, and service positions.',
     requirements: 'Closed - Rowlett Group members only',
     guestsWelcome: false,
-    mapLink: 'https://maps.google.com/?q=362+Oaks+Trail+162+Garland+TX+75043',
+    mapLink: 'https://maps.google.com/?q=346+Oaks+Trail+Suite+103+Garland+TX+75043',
     bgColor: 'bg-blue-50',
     borderColor: 'border-blue-400',
     textColor: 'text-blue-900'
@@ -829,7 +829,7 @@ Copy and paste these templates, then customize:
     title: 'December Speaker Series',
     time: '7:30 PM',
     location: 'Rowlett Group',
-    address: '362 Oaks Trail #162, Garland, TX 75043',
+    address: '346 Oaks Trail, Suite 103, Garland, TX 75043',
     category: 'speaker',
     speaker: {
         name: 'Various Speakers',
@@ -838,7 +838,7 @@ Copy and paste these templates, then customize:
     requirements: 'Open to all',
     guestsWelcome: true,
     description: 'Different Rowlett Group members speaking each Tuesday in December. Come hear diverse perspectives on recovery.',
-    mapLink: 'https://maps.google.com/?q=362+Oaks+Trail+162+Garland+TX+75043',
+    mapLink: 'https://maps.google.com/?q=346+Oaks+Trail+Suite+103+Garland+TX+75043',
     details: 'Weekly speaker series throughout the month.',
     bgColor: 'bg-purple-50',
     borderColor: 'border-purple-400',
@@ -865,7 +865,7 @@ Copy and paste these templates, then customize:
     title: 'Matt C. - A Blast from the Past!',
     time: '7:30 PM',
     location: 'Rowlett Group',
-    address: '362 Oaks Trail #162, Garland, TX 75043',
+    address: '346 Oaks Trail, Suite 103, Garland, TX 75043',
     category: 'speaker',
     speaker: {
         name: 'Matt C.',
@@ -876,7 +876,7 @@ Copy and paste these templates, then customize:
     requirements: 'Open to all',
     guestsWelcome: true,
     description: 'Join us as Matt C. shares his experience, strength, and hope. Matt has been a cornerstone of our group for over a decade.',
-    mapLink: 'https://maps.google.com/?q=362+Oaks+Trail+162+Garland+TX+75043',
+    mapLink: 'https://maps.google.com/?q=346+Oaks+Trail+Suite+103+Garland+TX+75043',
     details: 'Welcome back, Matt! Long-time Rowlett Group member returns to share his journey.',
     bgColor: 'bg-purple-50',
     borderColor: 'border-purple-400',
@@ -962,7 +962,7 @@ Copy and paste these templates, then customize:
     title: 'Rowlett Group 30th Anniversary Celebration',
     time: '5:30 PM - 9:00 PM',
     location: 'Rowlett Group',
-    address: '362 Oaks Trail #162, Garland, TX 75043',
+    address: '346 Oaks Trail, Suite 103, Garland, TX 75043',
     category: 'rowlett',
     description: 'Celebrating 30 years of carrying the message! Join us for fellowship, food, speakers, and celebration.',
     requirements: 'Open to all',
@@ -973,7 +973,7 @@ Copy and paste these templates, then customize:
         '7:00 PM': 'Speaker Meeting',
         '8:30 PM': 'Cake & Fellowship'
     },
-    mapLink: 'https://maps.google.com/?q=362+Oaks+Trail+162+Garland+TX+75043',
+    mapLink: 'https://maps.google.com/?q=346+Oaks+Trail+Suite+103+Garland+TX+75043',
     details: 'Bring a dish to share! Speaker TBA.',
     bgColor: 'bg-yellow-50',
     borderColor: 'border-yellow-400',
@@ -1000,7 +1000,7 @@ Copy and paste these templates, then customize:
 | `title` | String | `'Christmas Open House'` | Event name |
 | `time` | String | `'7:30 PM'` or `'2:00 PM - 4:00 PM'` | Time of event |
 | `location` | String | `'Rowlett Group'` | Venue name |
-| `address` | String | `'362 Oaks Trail #162, Garland, TX 75043'` | Full street address |
+| `address` | String | `'346 Oaks Trail, Suite 103, Garland, TX 75043'` | Full street address |
 | `category` | String | `'rowlett'`, `'speaker'`, `'area'`, `'service'`, `'crashed'` | Event category |
 | `bgColor` | String | `'bg-blue-50'` | Tailwind background color class |
 | `borderColor` | String | `'border-blue-400'` | Tailwind border color class |
@@ -1449,7 +1449,7 @@ Beyond events and schedule, here's how to update other website content.
 <div class="contact-info">
     <p><strong>Phone:</strong> <a href="tel:+19729250096">(972) 925-0096</a></p>
     <p><strong>Email:</strong> <a href="mailto:rowlettaa@gmail.com">rowlettaa@gmail.com</a></p>
-    <p><strong>Address:</strong> 362 Oaks Trail #162, Garland, TX 75043</p>
+    <p><strong>Address:</strong> 346 Oaks Trail, Suite 103, Garland, TX 75043</p>
 </div>
 ```
 
@@ -2695,7 +2695,7 @@ Comment it out:
 Ensure proper URL format:
 ```javascript
 // ✅ Correct format
-mapLink: 'https://maps.google.com/?q=362+Oaks+Trail+162+Garland+TX+75043'
+mapLink: 'https://maps.google.com/?q=346+Oaks+Trail+Suite+103+Garland+TX+75043'
 
 // Replace spaces with +
 // Full address including ZIP
@@ -2873,11 +2873,11 @@ mapLink: 'https://maps.google.com/?q=362+Oaks+Trail+162+Garland+TX+75043'
 
 ## Project Information
 
-**Last Updated:** November 2025
+**Last Updated:** August 2026
 **Maintained by:** Rowlett Group of AA
 **Website:** https://rowlettaa.org/
 **Contact:** rowlettaa@gmail.com | (972) 925-0096
-**Location:** 362 Oaks Trail #162, Garland, TX 75043
+**Location:** 346 Oaks Trail, Suite 103, Garland, TX 75043
 
 **Version:** 1.1
 **License:** Use restricted to Rowlett Group of AA
