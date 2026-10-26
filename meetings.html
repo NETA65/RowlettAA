@@ -407,7 +407,7 @@
             </button>
             <div id="results-count" class="text-sm text-gray-500 whitespace-nowrap">Loading meetings...</div>
         </div>
-        <div class="flex items-center gap-2 w-full sm:w-auto min-w-0">
+        <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto min-w-0">
             <select id="sort-select" title="Sort meetings" class="text-xs sm:text-sm border border-gray-200 rounded-lg px-2 sm:px-3 py-1.5 sm:py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-300 flex-shrink-0">
                 <option value="time">Sort: Time</option>
                 <option value="name">Sort: Name</option>
@@ -634,7 +634,7 @@
                 <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 sm:p-6">
                     <div class="flex items-center justify-between mb-4">
                         <h3 class="font-bold text-gray-800"><i class="fas fa-fire text-orange-500 mr-2"></i>Weekly Meeting Heatmap</h3>
-                        <p class="text-xs text-gray-400">Click any cell to filter</p>
+                        <p class="text-xs text-gray-400">Click any cell to filter by day &amp; time of day</p>
                     </div>
                     <p class="text-xs text-gray-400 mb-2 sm:hidden"><i class="fas fa-arrows-alt-h mr-1"></i>Scroll horizontally to see all hours</p>
                     <div id="heatmap-grid" class="overflow-x-auto scroll-hint"></div>
@@ -656,9 +656,9 @@
                 <div id="groups-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"></div>
             </div>
 
-            <div id="pagination" class="hidden flex items-center justify-center gap-1.5 sm:gap-2 mt-6 sm:mt-8 pb-4">
+            <div id="pagination" class="hidden flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-6 sm:mt-8 pb-4">
                 <button type="button" id="prev-page" class="px-3 sm:px-4 py-2 border border-gray-200 rounded-lg text-xs sm:text-sm hover:bg-gray-50 focus:ring-2 focus:ring-blue-400 focus:outline-none disabled:opacity-40 disabled:cursor-not-allowed" aria-label="Previous page"><i class="fas fa-chevron-left sm:mr-1" aria-hidden="true"></i><span class="hidden sm:inline"> Previous</span></button>
-                <div id="page-numbers" class="flex gap-1" role="navigation" aria-label="Pagination"></div>
+                <div id="page-numbers" class="flex flex-wrap justify-center gap-1" role="navigation" aria-label="Pagination"></div>
                 <button type="button" id="next-page" class="px-3 sm:px-4 py-2 border border-gray-200 rounded-lg text-xs sm:text-sm hover:bg-gray-50 focus:ring-2 focus:ring-blue-400 focus:outline-none disabled:opacity-40 disabled:cursor-not-allowed" aria-label="Next page"><span class="hidden sm:inline">Next </span><i class="fas fa-chevron-right sm:ml-1" aria-hidden="true"></i></button>
             </div>
         </main>
@@ -686,7 +686,7 @@
                 </svg>
                 <span class="text-white font-semibold">Rowlett Group of AA</span>
             </div>
-            <p class="text-xs sm:text-sm text-center">Meeting data by <a href="https://www.aadallas.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">Dallas AA</a>, <a href="https://www.fortworthaa.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">Fort Worth AA</a>, <a href="https://www.tyler-aa.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">Tyler AA</a>, <a href="https://district71.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">District 71</a>, <a href="https://arkansascentraloffice.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">Arkansas Central Office</a>, <a href="https://okcintergroup.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">OKC Intergroup</a>, <a href="https://nwta66.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">NWTA 66</a>, <a href="https://centexintergroup.com" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">Central Texas Intergroup</a> &amp; <a href="https://alcoholicosanonimosdallas.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">AA en Español</a> &middot; Maps by <a class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">CARTO</a></p>
+            <p class="text-xs sm:text-sm text-center">Meeting data by <a href="https://www.aadallas.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">Dallas AA</a>, <a href="https://www.fortworthaa.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">Fort Worth AA</a>, <a href="https://www.tyler-aa.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">Tyler AA</a>, <a href="https://district71.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">District 71</a>, <a href="https://arkansascentraloffice.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">Arkansas Central Office</a>, <a href="https://okcintergroup.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">OKC Intergroup</a>, <a href="https://nwta66.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">NWTA 66</a>, <a href="https://centexintergroup.com" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">Central Texas Intergroup</a> &amp; <a href="https://alcoholicosanonimosdallas.org" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">AA en Español</a> &middot; Maps &copy; <a href="https://www.openstreetmap.org/copyright" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener">OpenStreetMap</a> contributors</p>
             <p>© <span id="copyright-year"></span> Rowlett Group of AA. All Rights Reserved.<a href="https://rowlettaa.org/" class="inline-block ml-2 text-blue-400 hover:text-blue-300 transition-colors duration-200" aria-label="Rowlett Group of AA - RowlettAA.org" title="RowlettAA.org">RowlettAA.org</a></p>
 			<p>Designed &amp; Developed By Info@Manpasand.com</p>
         </div>
@@ -750,7 +750,8 @@
     let userLat = null, userLng = null;
     let userLocationLabel = 'Your Location';
     let mapInstance = null;
-    let leafletLoading = false;
+    let leafletLoading = false, clusterFailed = false;
+    let daysPicked = false;   // a day pill was clicked before the feeds finished loading
     let userMarker = null;
     let tableSortCol = 'time', tableSortDir = 'asc';
 
@@ -1072,6 +1073,7 @@
             });
             allMeetings.forEach(m => {
                 m._uid = m._source + '_' + m.id;
+                m._gk = _nameKey(m.group||m.name);   // normalised group name — lets the Groups view join one group's meetings across feeds
                 m._timeMins = timeToMinutes(m.time);
                 const dm = (m.district||m.group_notes||'').match(/District\s+(\d+)/i);
                 m._district = dm ? 'District '+dm[1]+(DISTRICT_SUFFIX[m._districtSrc||m._source]||'') : '';
@@ -1153,8 +1155,9 @@
 
     // ── URL State (Feature 1) ──
     function saveFiltersToURL() {
+        if (!allMeetings.length) return;   // feeds not loaded yet: keep the deep link for loadFiltersFromURL
         const p = new URLSearchParams();
-        if (filters.days.length) p.set('days', filters.days.join(','));
+        p.set('days', filters.days.join(',') || 'all');   // a missing 'days' means today on load, so All must be explicit
         if (filters.search) p.set('q', filters.search);
         if (filters.formats.length) p.set('fmt', filters.formats.join(','));
         if (filters.timeOfDay.length) p.set('tod', filters.timeOfDay.join(','));
@@ -1173,13 +1176,13 @@
     const VALID_VIEWS = ['list','grid','table','map','schedule','heatmap','groups'];
     function loadFiltersFromURL() {
         const p = new URLSearchParams(window.location.search);
-        if (p.has('days')) { filters.days = p.get('days').split(',').map(Number).filter(d => d>=0 && d<=6); }
-        else { filters.days = [new Date().getDay()]; } // default today
+        if (p.has('days')) { filters.days = p.get('days').split(',').map(Number).filter(d => d>=0 && d<=6); }   // 'all' → []
+        else if (!p.has('q') && !daysPicked) { filters.days = [new Date().getDay()]; } // default today (a ?q= link searches every day)
         if (p.has('q')) filters.search = p.get('q');
         if (p.has('fmt')) filters.formats = p.get('fmt').split(',');
         if (p.has('tod')) filters.timeOfDay = p.get('tod').split(',');
         if (p.has('type')) filters.types = p.get('type').split(',');
-        if (p.has('region')) filters.regions = p.get('region').split(',');
+        if (p.has('region')) filters.regions = p.get('region').split(/,(?=\S)/);   // ',' joins regions; ', ' is part of a name ('Fort Smith, AR')
         // 'dist' holds exact labels; legacy 'district' links predate the (AR)/(OK)/(NWTA)/(Central TX) labels — expand to every matching label
         if (p.has('dist') || p.has('district')) {
             const known = new Set(allMeetings.map(m => m._district).filter(Boolean)), legacy = !p.has('dist');
@@ -1188,7 +1191,12 @@
         if (p.has('acc')) filters.accessibility = p.get('acc').split(',');
         if (p.has('src')) filters.sources = p.get('src').split(',');
         if (p.has('radius')) filters.radius = parseInt(p.get('radius'))||0;
-        if (p.has('quick')) filters.quick = p.get('quick');
+        if (p.has('quick')) {
+            filters.quick = p.get('quick');
+            if (filters.quick==='nearest') $('sort-select').value = 'distance';
+        }
+        // A bookmarked (or clicked-while-loading) Today/Tonight/Now/Soon means the day it is opened, not the day saved in the link
+        if (['now','soon','today','tonight'].includes(filters.quick)) filters.days = [new Date().getDay()];
         if (p.has('view')) { const v = p.get('view'); if (VALID_VIEWS.includes(v)) currentView = v; }
 
         // Sync all UI to match loaded filters
@@ -1234,7 +1242,8 @@
 
         filteredMeetings = allMeetings.filter(m => {
             // Days (multi-select, Feature 10)
-            if (filters.days.length && !filters.days.includes(m.day)) return false;
+            // Now/Soon go by the live clock instead (liveStatus handles meetings that run past midnight)
+            if (filters.days.length && filters.quick!=='now' && filters.quick!=='soon' && !filters.days.includes(m.day)) return false;
             if (filters.search) {
                 const q = filters.search.toLowerCase();
                 const h = [m.name,m.group,m.location,m.formatted_address,m.region,m.notes,m.group_notes,m._district].filter(Boolean).join(' ').toLowerCase();
@@ -1262,29 +1271,33 @@
             if (filters.quick==='tonight') { if (m.day!==currentDay||m._timeMins<1020) return false; }
             if (filters.quick==='online') { const f=m.attendance_option||'in_person'; if (f!=='online'&&f!=='hybrid') return false; }
             if (filters.quick==='open') { if (!(m.types||[]).includes('O')) return false; }
-            if (filters.quick==='nearest') {
-                if (!m.latitude||!m.longitude||userLat==null) return false;
+            // Nearest only narrows once a location is known (a ?quick=nearest link opened without one shows everything)
+            if (filters.quick==='nearest' && userLat!=null) {
+                if (!m.latitude||!m.longitude) return false;
             }
             return true;
         });
 
-        // Sort
-        const sortBy = $('sort-select').value;
-        if (sortBy==='distance'||filters.quick==='nearest') {
-            if (userLat!=null) filteredMeetings.forEach(m => { m._dist=(m.latitude&&m.longitude&&!isVirtualPin(m))?haversine(userLat,userLng,parseFloat(m.latitude),parseFloat(m.longitude)):99999; });
-        }
-        filteredMeetings.sort((a,b) => {
-            if (sortBy==='time') return a.day-b.day||a._timeMins-b._timeMins;
-            if (sortBy==='name') return (a.name||'').localeCompare(b.name||'');
-            if (sortBy==='region') return (a.region||'').localeCompare(b.region||'')||a._timeMins-b._timeMins;
-            if ((sortBy==='distance'||filters.quick==='nearest')&&userLat!=null) return (a._dist||99999)-(b._dist||99999);
-            return a._timeMins-b._timeMins;
-        });
-
+        sortFiltered();
         currentPage = 1;
         updateActiveFiltersDisplay();
         saveFiltersToURL();
         render();
+    }
+
+    // Toolbar sort, in place. Also run when leaving the table, whose column sort reorders the same array
+    function sortFiltered() {
+        const sortBy = $('sort-select').value;
+        // Distances whenever a location is known — the table's Dist. column sorts on _dist too
+        if (userLat!=null) filteredMeetings.forEach(m => { m._dist=(m.latitude&&m.longitude&&!isVirtualPin(m))?haversine(userLat,userLng,parseFloat(m.latitude),parseFloat(m.longitude)):99999; });
+        filteredMeetings.sort((a,b) => {
+            if (sortBy==='time') return a.day-b.day||a._timeMins-b._timeMins;
+            if (sortBy==='name') return (a.name||'').localeCompare(b.name||'');
+            if (sortBy==='region') return (a.region||'').localeCompare(b.region||'')||a.day-b.day||a._timeMins-b._timeMins;
+            if ((sortBy==='distance'||filters.quick==='nearest')&&userLat!=null) return (a._dist||99999)-(b._dist||99999);
+            return a.day-b.day||a._timeMins-b._timeMins;
+        });
+        tableSortCol = sortBy; tableSortDir = 'asc';
     }
 
     function updateActiveFiltersDisplay() {
@@ -1298,7 +1311,7 @@
         filters.accessibility.forEach(a => tags.push({label:TYPE_MAP[a]||a,type:'accessibility',value:a}));
         filters.districts.forEach(d => tags.push({label:d,type:'district',value:d}));
         filters.sources.forEach(s => tags.push({label:SOURCE_LABELS[s]||s,type:'source',value:s}));
-        if (filters.radius>0) tags.push({label:`Within ${filters.radius} mi`,type:'radius'});
+        if (filters.radius>0 && userLat!=null) tags.push({label:`Within ${filters.radius} mi`,type:'radius'});   // radius only applies once a location is set
         if (filters.quick) tags.push({label:{now:'Happening Now',soon:'Starting Soon',today:'Today',tonight:'Tonight',nearest:'Nearest',online:'Online',open:'Open'}[filters.quick]||filters.quick,type:'quick'});
 
         const container=$('active-filter-tags'), wrapper=$('active-filters'), countBadge=$('active-filter-count');
@@ -1566,9 +1579,12 @@
             // Three candidate keys — if ANY matches an existing group, merge into it
             const keys = [
                 m._source + '_n_' + gname + '_l_' + (m.location_id||m.location||''),  // name + location
-                m._source + '_n_' + gname + (m.group_id ? '' : '_r_' + (m.region||'').toLowerCase())  // name only (same source; same town when there is no group_id)
+                m._source + '_n_' + gname + '_r_' + (m.region||'').toLowerCase()      // name + town (same source) — same-named groups in different towns stay apart
             ];
             if (m.group_id) keys.push(m._source + '_g_' + m.group_id);                 // group_id
+            // Same group in another feed (de-dup only removed the meetings both feeds list): same name + language at the same venue (~1 km grid).
+            // No men/women part: one group's men's or women's meeting is often listed by only one of the feeds
+            if (m._gk && m.latitude && m.longitude && !isVirtualPin(m) && m.approximate!=='yes') keys.push('x_' + (m.types.includes('S')?'es':'en') + '_' + m._gk + '@' + (+m.latitude).toFixed(2) + ',' + (+m.longitude).toFixed(2));
 
             // Find the first key that already points to a group
             let canonical = null;
@@ -1579,6 +1595,7 @@
             for (const k of keys) {
                 const old = resolve(k);
                 keyAlias[k] = canonical;
+                if (old !== canonical) keyAlias[old] = canonical;   // re-point the old root too, so keys still aimed at it follow the merge
                 if (old !== canonical && groupMap[old]) {
                     // Merge the old group into canonical
                     const src = groupMap[old], dst = groupMap[canonical] || (groupMap[canonical] = { id:canonical, name:m.group||m.name||'Unknown', region:m.region||'', district:m._district||'',
@@ -1605,11 +1622,19 @@
         let groups = Object.values(groupMap);
         // Sort meetings within each group by day then time for consistent display
         groups.forEach(g => g.meetings.sort((a,b) => a.day-b.day || a._timeMins-b._timeMins));
+        // Card pin, location and region from the first real venue (online-only pins are city centroids / placeholders); district from any meeting that has one
+        groups.forEach(g => {
+            const p = g.meetings.find(m => m.latitude&&m.longitude&&!isVirtualPin(m)), f = p||g.meetings[0];
+            g.latitude = p ? p.latitude : ''; g.longitude = p ? p.longitude : '';
+            g.location = f.location||f.formatted_address||''; g.region = f.region||g.region;
+            if (!g.district) g.district = (g.meetings.find(m => m._district)||{})._district||'';
+        });
         const sortBy = $('groups-sort').value;
-        if (sortBy==='name') groups.sort((a,b)=>a.name.localeCompare(b.name));
+        // 'Nearest' without a location falls back to name order
+        if (sortBy==='name'||(sortBy==='distance'&&userLat==null)) groups.sort((a,b)=>a.name.localeCompare(b.name));
         else if (sortBy==='meetings') groups.sort((a,b)=>b.meetings.length-a.meetings.length);
         else if (sortBy==='region') groups.sort((a,b)=>a.region.localeCompare(b.region)||a.name.localeCompare(b.name));
-        else if (sortBy==='distance'&&userLat!=null) groups.sort((a,b)=>{
+        else if (sortBy==='distance') groups.sort((a,b)=>{
             const dA=(a.latitude&&a.longitude)?haversine(userLat,userLng,parseFloat(a.latitude),parseFloat(a.longitude)):99999;
             const dB=(b.latitude&&b.longitude)?haversine(userLat,userLng,parseFloat(b.latitude),parseFloat(b.longitude)):99999;
             return dA-dB;
@@ -1653,31 +1678,42 @@
         }).join('');
     }
 
-    // ── Map View (CARTO Voyager + user pin + region click) ──
+    // ── Map View (OpenStreetMap + user pin + region click) ──
+    function loadMapScript(src, onload, onerror) {
+        const s = document.createElement('script'); s.src = src; s.onload = onload;
+        s.onerror = () => { s.remove(); onerror(); };
+        document.head.appendChild(s);
+    }
     function renderMapView(page) {
         mapView.classList.remove('hidden');
         const withCoords = filteredMeetings.filter(m => m.latitude&&m.longitude&&!isVirtualPin(m));
-        if (!window.L && !leafletLoading) {
-            leafletLoading = true;
-            const link = document.createElement('link'); link.rel='stylesheet';
-            link.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-            document.head.appendChild(link);
-            const clusterLink = document.createElement('link'); clusterLink.rel='stylesheet';
-            clusterLink.href='https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css';
-            document.head.appendChild(clusterLink);
-            const clusterDefaultLink = document.createElement('link'); clusterDefaultLink.rel='stylesheet';
-            clusterDefaultLink.href='https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css';
-            document.head.appendChild(clusterDefaultLink);
-            const script = document.createElement('script');
-            script.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-            script.onload = () => {
-                const clusterScript = document.createElement('script');
-                clusterScript.src='https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js';
-                clusterScript.onload = () => initMap(withCoords);
-                document.head.appendChild(clusterScript);
-            };
-            document.head.appendChild(script);
-        } else if (window.L) { initMap(withCoords); }
+        if (!(window.L && (L.markerClusterGroup || clusterFailed))) {
+            if (!leafletLoading) {
+                leafletLoading = true;
+                if (!document.querySelector('link[href*="leaflet@1.9.4"]')) {
+                    const link = document.createElement('link'); link.rel='stylesheet';
+                    link.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+                    document.head.appendChild(link);
+                    const clusterLink = document.createElement('link'); clusterLink.rel='stylesheet';
+                    clusterLink.href='https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css';
+                    document.head.appendChild(clusterLink);
+                    const clusterDefaultLink = document.createElement('link'); clusterDefaultLink.rel='stylesheet';
+                    clusterDefaultLink.href='https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css';
+                    document.head.appendChild(clusterDefaultLink);
+                }
+                $('map-container').innerHTML = '<p class="text-gray-500 text-sm">Map loading...</p>';
+                // When the scripts are in, draw from the filters as they are then — they may have changed during the download
+                const ready = () => { leafletLoading = false; if (currentView==='map') render(); };
+                // Leaflet blocked or offline: say so, and let the next visit to Map view try again
+                const failed = () => { leafletLoading = false; if (currentView==='map') $('map-container').innerHTML = '<p class="text-gray-500 text-sm px-4 text-center">The map could not load. Check your connection and open Map view again.</p>'; };
+                // Clustering is an extra: if only markercluster fails, draw the pins unclustered
+                const loadCluster = () => loadMapScript('https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js', ready, () => { clusterFailed = true; ready(); });
+                if (window.L) loadCluster(); else loadMapScript('https://unpkg.com/leaflet@1.9.4/dist/leaflet.js', loadCluster, failed);
+            }
+        }
+        // Same markers as the map already shows (list paging, per-page, back from another view): keep the visitor's zoom and pan
+        else if (mapInstance && mapInstance._for===filteredMeetings && mapInstance._user===userLat+','+userLng) mapInstance.invalidateSize();
+        else initMap(withCoords);
         $('map-list').innerHTML = (page || withCoords).map(m => meetingCardHTML(m,'list')).join('');
     }
     function initMap(meetings) {
@@ -1686,11 +1722,13 @@
         container.innerHTML = '';
         if (!meetings.length) { container.innerHTML='<div class="flex items-center justify-center h-full text-gray-500">No meetings with location data</div>'; return; }
 
-        mapInstance = L.map(container).setView([32.78,-96.80],10);
-        // CARTO Voyager tiles
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-            attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
-            subdomains:'abcd', maxZoom:19
+        // No starting setView: fitBounds below sets the first view, so no tiles are fetched for a view nobody sees
+        mapInstance = L.map(container);
+        mapInstance._for = filteredMeetings; mapInstance._user = userLat+','+userLng;
+        // OpenStreetMap standard tiles — no API key; the OSM tile policy requires this attribution
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
+            maxZoom:19
         }).addTo(mapInstance);
 
         // User location pin (Feature 9)
@@ -1727,7 +1765,7 @@
             else marker.addTo(mapInstance);
         });
         if (clusterGroup) mapInstance.addLayer(clusterGroup);
-        mapInstance.fitBounds(bounds, {padding:[40,40]});
+        mapInstance.fitBounds(bounds, {padding:[40,40], maxZoom:15});   // one location: street level, not a single building at 19
         addFullscreenControl();
     }
     // Expose region filter for map popup buttons (Feature 16)
@@ -1751,7 +1789,10 @@
                 btn.title = 'Toggle fullscreen';
                 btn.setAttribute('aria-label', 'Toggle fullscreen map');
                 btn.style.cssText = 'background:white;border:2px solid rgba(0,0,0,0.2);border-radius:6px;padding:6px 10px;cursor:pointer;font-size:14px;display:flex;align-items:center;gap:6px;font-family:inherit;font-weight:500;color:#374151;box-shadow:0 2px 6px rgba(0,0,0,0.15);';
-                btn.innerHTML = '<i class="fas fa-expand"></i><span style="font-size:12px">Fullscreen</span>';
+                // A map rebuilt while fullscreen (popup 'Filter:' button) must keep offering Exit
+                btn.innerHTML = $('map-container').classList.contains('map-fullscreen')
+                    ? '<i class="fas fa-compress"></i><span style="font-size:12px">Exit</span>'
+                    : '<i class="fas fa-expand"></i><span style="font-size:12px">Fullscreen</span>';
                 L.DomEvent.disableClickPropagation(btn);
                 btn.addEventListener('click', () => {
                     const container = $('map-container');
@@ -1784,9 +1825,9 @@
         pagination.classList.remove('hidden');
         $('prev-page').disabled = currentPage<=1;
         $('next-page').disabled = currentPage>=totalPages;
-        const pages = [];
+        const pages = [], w = innerWidth<640 ? 1 : 2;   // fewer neighbour pages on phones so the row fits
         for (let i=1;i<=totalPages;i++) {
-            if (i===1||i===totalPages||(i>=currentPage-2&&i<=currentPage+2)) pages.push(i);
+            if (i===1||i===totalPages||(i>=currentPage-w&&i<=currentPage+w)) pages.push(i);
             else if (pages[pages.length-1]!=='...') pages.push('...');
         }
         $('page-numbers').innerHTML = pages.map(p => p==='...'?'<span class="px-2 py-1 text-gray-400">...</span>':
@@ -1800,7 +1841,7 @@
         const fmt = m.attendance_option||'in_person';
         const types = (m.types||[]).filter(t => TYPE_MAP[t]);
         const dist = (userLat!=null&&m.latitude&&m.longitude&&!isVirtualPin(m))?haversine(userLat,userLng,parseFloat(m.latitude),parseFloat(m.longitude)).toFixed(1)+' mi away':'';
-        const shareUrl = window.location.origin + window.location.pathname + '?q=' + encodeURIComponent(m.name||m.group||'');
+        const shareUrl = window.location.origin + window.location.pathname + '?days=' + m.day + '&q=' + encodeURIComponent(m.name||m.group||'');   // the meeting's own day, not the recipient's today
 
         $('modal-content').innerHTML = `
             <div class="p-4 sm:p-6 bg-gradient-to-r from-blue-700 to-blue-800 text-white rounded-t-xl sm:rounded-t-2xl">
@@ -1936,6 +1977,7 @@
     document.querySelectorAll('.day-pill').forEach(btn => {
         btn.addEventListener('click', () => {
             const d = parseInt(btn.dataset.day);
+            daysPicked = true;
             if (d === -1) {
                 // "All Days" - clear selection
                 filters.days = [];
@@ -1975,12 +2017,16 @@
                         $('distance-no-location').classList.add('hidden');
                         $('distance-controls').classList.remove('hidden');
                     } else {
+                        // Turn Nearest on only once a location arrives — a denied prompt would otherwise leave an empty list
+                        filters.quick = null; btn.classList.remove('ring-2','ring-offset-1');
                         requestLocation(() => {
-                            $('sort-select').value = 'distance';
-                            filters.radius=10; $('radius-slider').value=10; $('radius-value').textContent='10 miles';
+                            if (!filters.quick) {   // unless another quick filter was picked while waiting
+                                filters.quick = 'nearest'; btn.classList.add('ring-2','ring-offset-1');
+                                $('sort-select').value = 'distance';
+                                filters.radius=10; $('radius-slider').value=10; $('radius-value').textContent='10 miles';
+                            }
                             applyFilters();
                         });
-                        return;
                     }
                 }
             }
@@ -2012,7 +2058,10 @@
     // Sort & per-page
     $('sort-select').addEventListener('change', applyFilters);
     $('perpage-select').addEventListener('change', e => { PER_PAGE = parseInt(e.target.value); currentPage = 1; render(); });
-    $('groups-sort').addEventListener('change', () => { if (currentView==='groups') { currentPage=1; render(); } });
+    $('groups-sort').addEventListener('change', e => {
+        if (e.target.value==='distance' && userLat==null) showToast('Set your location under Distance to sort by nearest');
+        if (currentView==='groups') { currentPage=1; render(); }
+    });
 
     // Table column sorting
     document.addEventListener('click', e => {
@@ -2029,10 +2078,11 @@
                 if (col==='day') return dir*(a.day-b.day);
                 if (col==='region') return dir*(a.region||'').localeCompare(b.region||'');
                 if (col==='format') return dir*(a.attendance_option||'').localeCompare(b.attendance_option||'');
-                if (col==='district') return dir*(a._district||'').localeCompare(b._district||'');
+                if (col==='district') return dir*(a._district||'').localeCompare(b._district||'',undefined,{numeric:true});   // District 2 before District 10
                 if (col==='distance'&&userLat!=null) return dir*((a._dist||99999)-(b._dist||99999));
                 return 0;
             });
+            currentPage=1;   // a new order starts at its first page
             const pp=PER_PAGE||filteredMeetings.length;
             const totalPages=Math.ceil(filteredMeetings.length/pp);
             const page=filteredMeetings.slice((currentPage-1)*pp,(currentPage-1)*pp+pp);
@@ -2060,7 +2110,11 @@
             userMarker.setPopupContent('<b>' + esc(userLocationLabel) + '</b>');
         }
         if (cb) cb();
-        else { filters.radius = filters.radius || 25; applyFilters(); }
+        else {
+            filters.radius = filters.radius || 25;
+            $('radius-slider').value = filters.radius; $('radius-value').textContent = filters.radius + ' mile' + (filters.radius !== 1 ? 's' : '');
+            applyFilters();
+        }
     }
 
     // GPS location
@@ -2117,12 +2171,19 @@
     document.querySelectorAll('.view-toggle button').forEach(btn => {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.view-toggle button').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active'); currentView=btn.dataset.view; currentPage=1; render();
+            btn.classList.add('active'); currentView=btn.dataset.view; currentPage=1;
+            // Undo a table column sort (other views follow the toolbar sort) and keep ?view= current for reload/share
+            if (allMeetings.length) sortFiltered();
+            saveFiltersToURL(); render();
         });
     });
 
     // Pagination
-    function scrollToResults() { const el = allViews.find(v => !v.classList.contains('hidden')) || listView; el.scrollIntoView({behavior:'smooth',block:'start'}); }
+    // Scroll to the new page's first result, clear of the sticky header + toolbar (in Map view that is the list under the map)
+    function scrollToResults() {
+        const el = currentView==='map' ? $('map-list') : (allViews.find(v => !v.classList.contains('hidden')) || listView);
+        window.scrollTo({top: el.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight - $('toolbar').offsetHeight - 8, behavior:'smooth'});
+    }
     $('prev-page').addEventListener('click', () => { if (currentPage>1){currentPage--;render();scrollToResults();} });
     $('next-page').addEventListener('click', () => { const pp=PER_PAGE||filteredMeetings.length; const max=Math.ceil(filteredMeetings.length/pp); if(currentPage<max){currentPage++;render();scrollToResults();} });
     $('page-numbers').addEventListener('click', e => { if(e.target.dataset.page){currentPage=parseInt(e.target.dataset.page);render();scrollToResults();} });
@@ -2167,7 +2228,8 @@
         currentView = 'list';
         document.querySelectorAll('.view-toggle button').forEach(b => b.classList.toggle('active',b.dataset.view==='list'));
         applyFilters();
-        showToast(`${DAY_NAMES[day]} ${hour<12?(hour||12)+'am':hour===12?'12pm':(hour-12)+'pm'} meetings`);
+        // The filter is the whole time-of-day block, so name the block, not the clicked hour
+        showToast(`${DAY_NAMES[day]} ${{morning:'morning (before noon)',afternoon:'afternoon (12-5pm)',evening:'evening (5-9pm)',night:'late night (after 9pm)'}[filters.timeOfDay[0]]} meetings`);
     });
 
     // Schedule accordion toggle
@@ -2245,6 +2307,7 @@
         syncDayPillsUI();
         document.querySelectorAll('input[type="checkbox"]').forEach(c => c.checked=false);
         document.querySelectorAll('.quick-filter').forEach(b => b.classList.remove('ring-2','ring-offset-1'));
+        $('region-search').value=''; document.querySelectorAll('.region-label').forEach(l => l.style.display=''); $('region-no-results').classList.add('hidden');
         applyFilters();
     }
     $('reset-filters').addEventListener('click', resetAll);
@@ -2257,7 +2320,11 @@
         navigator.permissions.query({name:'geolocation'}).then(result => {
             if (result.state === 'granted') {
                 navigator.geolocation.getCurrentPosition(pos => {
-                    setUserLocation(pos.coords.latitude, pos.coords.longitude, 'My Current Location', () => {});
+                    // No radius is imposed here; re-filter so distances, Nearest links and the map pin pick the location up
+                    setUserLocation(pos.coords.latitude, pos.coords.longitude, 'My Current Location', () => {
+                        if (!filters.radius) $('radius-value').textContent = 'Any distance';
+                        if (allMeetings.length) applyFilters();
+                    });
                 }, ()=>{}, {enableHighAccuracy:false,timeout:5000});
             }
         }).catch(()=>{});
